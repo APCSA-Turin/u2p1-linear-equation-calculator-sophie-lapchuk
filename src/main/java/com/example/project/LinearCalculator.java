@@ -1,6 +1,9 @@
 package com.example.project;
 public class LinearCalculator{
-    //INSTANCE VARIABLES 
+    //FOR EXTRA CREDIT 
+    //you should copy and paste all of your code from the LinearCalculator class
+    // but NOT printInfo(). Please update it below
+        //INSTANCE VARIABLES 
     //4 INTEGER variables (name them: x1,x2,y1,y2) 
     int x1;
     int x2;
@@ -76,6 +79,8 @@ public class LinearCalculator{
             return (double)y1;
         } else if (x2 == 0) {
             return (double)y2;
+        }else if (x1 == x2) { //if it is a vertical line
+            return -999.99;
         }else {
             double b = y1 - firstPart;
             String bString = "" + String.format("%.2f",b);
@@ -130,9 +135,6 @@ public class LinearCalculator{
         return yRounded;
     }
 
-    //printInfo() -> returns a string of information
-    //this method is tested but you can also call it in your main method if gradle tests are 
-    //not working. 
     public String printInfo(){
         //returning using all of the methods
         String str = "The two points are: (" + x1 + "," +y1  + ")";
@@ -141,10 +143,11 @@ public class LinearCalculator{
         str += "\nThe slope of this line is: " + slope();
         str += "\nThe y-intercept of the line is: " + yInt();
         str += "\nThe distance between the two points is: " + distance();
- 
         return str;
     }
 
-
-
+  
 }
+
+
+
